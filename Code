@@ -1,0 +1,217 @@
+local gameCore = game.CoreGui
+
+local function AddUICorner(element)
+	local UiCorner = Instance.new("UICorner")
+	UiCorner.Parent = element
+	UiCorner.CornerRadius = UDim.new(0, 20)
+end
+
+local function AddUIStroke(element)
+	local UiStroke = Instance.new("UIStroke")
+	UiStroke.Transparency = 0.3
+	UiStroke.Thickness = 3
+	UiStroke.Color = Color3.fromRGB(30, 30, 30)
+	UiStroke.Parent = element
+end
+
+local AntiAfkGui = Instance.new("ScreenGui")
+AntiAfkGui.Parent = gameCore
+AntiAfkGui.Name = "AntiAfk"
+AntiAfkGui.IgnoreGuiInset = true
+AntiAfkGui.ResetOnSpawn = false
+
+local MainFrame = Instance.new("Frame", AntiAfkGui)
+MainFrame.Name = "MainFrame"
+MainFrame.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
+MainFrame.Size = UDim2.new(0.209, 0,0.269, 0)
+MainFrame.Position = UDim2.new(0.395, 0,0.365, 0)
+MainFrame.BackgroundTransparency = 0.2
+AddUICorner(MainFrame)
+
+local UiStrokeForMain = Instance.new("UIStroke",MainFrame)
+UiStrokeForMain.Color = Color3.fromRGB(255, 255, 255)
+UiStrokeForMain.Transparency = 0.3
+UiStrokeForMain.Thickness = 3
+
+local TitleLabel = Instance.new("TextLabel",MainFrame)
+TitleLabel.TextScaled = true
+TitleLabel.Text = "Anti Afk Script"
+TitleLabel.Name = "Title"
+TitleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TitleLabel.BackgroundTransparency = 1
+TitleLabel.Size = UDim2.new(0.403, 0,0.174, 0)
+TitleLabel.Position = UDim2.new(0.298, 0,0.111, 0)
+TitleLabel.Font = Enum.Font.FredokaOne
+AddUIStroke(TitleLabel)
+
+local Method1 = Instance.new("Folder", MainFrame)
+Method1.Name = "Method1"
+
+local PreventByClick = Instance.new("TextButton",Method1)
+PreventByClick.BackgroundTransparency = 1
+PreventByClick.Text = ""
+PreventByClick.Name = "PreventByClick"
+
+local SwitchMethod1 = Instance.new("TextButton", Method1)
+SwitchMethod1.Name = "SwitchMethod1"
+SwitchMethod1.Text = "False"
+SwitchMethod1.TextScaled = true
+SwitchMethod1.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwitchMethod1.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SwitchMethod1.Size = UDim2.new(0.315, 0,0.174, 0)
+SwitchMethod1.Position = UDim2.new(0, 0,0.649, 0)
+SwitchMethod1.Font = Enum.Font.FredokaOne
+AddUICorner(SwitchMethod1)
+AddUIStroke(SwitchMethod1)
+
+local MethodTitle1 = Instance.new("TextLabel", Method1)
+MethodTitle1.Size = UDim2.new(0.315, 0, 0.174, 0)
+MethodTitle1.Position = UDim2.new(0, 0, 0.413, 0)
+MethodTitle1.Text = "Method 1"
+MethodTitle1.TextScaled = true
+MethodTitle1.Font = Enum.Font.FredokaOne
+MethodTitle1.BackgroundTransparency = 1
+MethodTitle1.TextColor3 = Color3.fromRGB(255, 255, 255)
+AddUICorner(MethodTitle1)
+AddUIStroke(MethodTitle1)
+
+local Method2 = Instance.new("Folder", MainFrame)
+Method2.Name = "Method2"
+
+local SwitchMethod2 = Instance.new("TextButton", Method2)
+SwitchMethod2.Name = "SwitchMethod2"
+SwitchMethod2.Text = "False"
+SwitchMethod2.TextScaled = true
+SwitchMethod2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwitchMethod2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SwitchMethod2.Size = UDim2.new(0.315, 0, 0.174, 0)
+SwitchMethod2.Position = UDim2.new(0.343, 0, 0.649, 0)
+SwitchMethod2.Font = Enum.Font.FredokaOne
+AddUICorner(SwitchMethod2)
+AddUIStroke(SwitchMethod2)
+
+local MethodTitle2 = Instance.new("TextLabel", Method2)
+MethodTitle2.Size = UDim2.new(0.315, 0, 0.174, 0)
+MethodTitle2.Position = UDim2.new(0.343, 0, 0.413, 0)
+MethodTitle2.Text = "Method 2"
+MethodTitle2.TextScaled = true
+MethodTitle2.Font = Enum.Font.FredokaOne
+MethodTitle2.BackgroundTransparency = 1
+MethodTitle2.TextColor3 = Color3.fromRGB(255, 255, 255)
+AddUICorner(MethodTitle2)
+AddUIStroke(MethodTitle2)
+
+local Method3 = Instance.new("Folder", MainFrame)
+Method3.Name = "Method3"
+
+local SwitchMethod3 = Instance.new("TextButton", Method3)
+SwitchMethod3.Name = "SwitchMethod3"
+SwitchMethod3.Text = "False"
+SwitchMethod3.TextScaled = true
+SwitchMethod3.TextColor3 = Color3.fromRGB(255, 255, 255)
+SwitchMethod3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+SwitchMethod3.Size = UDim2.new(0.315, 0, 0.174, 0)
+SwitchMethod3.Position = UDim2.new(0.685, 0, 0.649, 0)
+SwitchMethod3.Font = Enum.Font.FredokaOne
+AddUICorner(SwitchMethod3)
+AddUIStroke(SwitchMethod3)
+
+
+local MethodTitle3 = Instance.new("TextLabel", Method3)
+MethodTitle3.Size = UDim2.new(0.315, 0, 0.174, 0)
+MethodTitle3.Position = UDim2.new(0.685, 0, 0.413, 0)
+MethodTitle3.Text = "Method 3"
+MethodTitle3.TextScaled = true
+MethodTitle3.Font = Enum.Font.FredokaOne
+MethodTitle3.BackgroundTransparency = 1
+MethodTitle3.TextColor3 = Color3.fromRGB(255, 255, 255)
+AddUICorner(MethodTitle3)
+AddUIStroke(MethodTitle3)
+
+local AutoMethood1 = false
+local AutoMethood2 = false
+local AutoMethood3 = false
+
+SwitchMethod1.MouseButton1Click:Connect(function()
+	if SwitchMethod1.BackgroundColor3 == Color3.new(1, 0, 0) then
+		SwitchMethod1.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+		SwitchMethod1.Text = "True"
+		AutoMethood1 = true
+	else
+		SwitchMethod1.BackgroundColor3 = Color3.new(1, 0, 0)
+		SwitchMethod1.Text = "False"
+		AutoMethood1 = false
+	end
+end)
+
+SwitchMethod2.MouseButton1Click:Connect(function()
+	if SwitchMethod2.BackgroundColor3 == Color3.new(1, 0, 0) then
+		SwitchMethod2.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+		SwitchMethod2.Text = "True"
+		AutoMethood2 = true
+	else
+		SwitchMethod2.BackgroundColor3 = Color3.new(1, 0, 0)
+		SwitchMethod2.Text = "False"
+		AutoMethood2 = false
+	end
+end)
+
+SwitchMethod3.MouseButton1Click:Connect(function()
+	if SwitchMethod3.BackgroundColor3 == Color3.new(1, 0, 0) then
+		SwitchMethod3.BackgroundColor3 = Color3.new(0.333333, 1, 0)
+		SwitchMethod3.Text = "True"
+		AutoMethood3 = true
+	else
+		SwitchMethod3.BackgroundColor3 = Color3.new(1, 0, 0)
+		SwitchMethod3.Text = "False"
+		AutoMethood3 = false
+	end
+end)
+
+while wait() do
+	if AutoMethood1 == true then
+		game.Players.LocalPlayer.Idled:Connect(function()
+			wait()
+			game.Players.LocalPlayer.Character.Humanoid.Jump = true
+		end)
+	end
+end
+
+while wait() do
+	if AutoMethood2 == true then
+		game.Players.LocalPlayer.Idled:Connect(function()
+			PreventByClick.ClickButton2(Vector2.new())
+		end)
+	end
+end
+
+-- Function to get a random spawn point
+function GetRandomSpawnPoint()
+	local spawnPoints = game.Workspace:GetChildren()
+	local filteredSpawnPoints = {}
+	for _, spawnPoint in ipairs(spawnPoints) do
+		if spawnPoint:IsA("SpawnLocation") then
+			table.insert(filteredSpawnPoints, spawnPoint)
+		end
+	end
+
+	if #filteredSpawnPoints > 0 then
+		local randomIndex = math.random(1, #filteredSpawnPoints)
+		return filteredSpawnPoints[randomIndex]
+	else
+		return nil
+	end
+end
+
+while wait() do
+	if AutoMethood3 == true then
+		game.Players.LocalPlayer.Idled:Connect(function()
+			local randomSpawnPoint = GetRandomSpawnPoint()
+			if randomSpawnPoint then
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = randomSpawnPoint.CFrame + Vector3.new(0,1,0)
+			else
+				print("No valid spawn points found.")
+			end
+		end)
+	end
+end
