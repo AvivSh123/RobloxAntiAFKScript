@@ -1,4 +1,4 @@
-local gameCore = game.CoreGui
+llocal gameCore = game.CoreGui
 
 local function AddUICorner(element)
 	local UiCorner = Instance.new("UICorner")
@@ -168,6 +168,16 @@ SwitchMethod3.MouseButton1Click:Connect(function()
 	end
 end)
 
+function keyPressed(input)
+	if input.KeyCode == Enum.KeyCode.F then
+		AntiAfkGui.Enabled = false
+	else
+		AntiAfkGui.Enabled = true
+	end
+end
+
+game:GetService("UserInputService").InputBegan:Connect(keyPressed)
+
 while wait() do
 	if AutoMethood1 == true then
 		game.Players.LocalPlayer.Idled:Connect(function()
@@ -175,43 +185,15 @@ while wait() do
 			game.Players.LocalPlayer.Character.Humanoid.Jump = true
 		end)
 	end
-end
 
-while wait() do
 	if AutoMethood2 == true then
 		game.Players.LocalPlayer.Idled:Connect(function()
 			PreventByClick.ClickButton2(Vector2.new())
 		end)
 	end
-end
 
--- Function to get a random spawn point
-function GetRandomSpawnPoint()
-	local spawnPoints = game.Workspace:GetChildren()
-	local filteredSpawnPoints = {}
-	for _, spawnPoint in ipairs(spawnPoints) do
-		if spawnPoint:IsA("SpawnLocation") then
-			table.insert(filteredSpawnPoints, spawnPoint)
-		end
-	end
-
-	if #filteredSpawnPoints > 0 then
-		local randomIndex = math.random(1, #filteredSpawnPoints)
-		return filteredSpawnPoints[randomIndex]
-	else
-		return nil
-	end
-end
-
-while wait() do
 	if AutoMethood3 == true then
 		game.Players.LocalPlayer.Idled:Connect(function()
-			local randomSpawnPoint = GetRandomSpawnPoint()
-			if randomSpawnPoint then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = randomSpawnPoint.CFrame + Vector3.new(0,1,0)
-			else
-				print("No valid spawn points found.")
-			end
 		end)
 	end
 end
