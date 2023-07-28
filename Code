@@ -26,6 +26,9 @@ MainFrame.BackgroundColor3 = Color3.fromRGB(66, 66, 66)
 MainFrame.Size = UDim2.new(0.209, 0,0.269, 0)
 MainFrame.Position = UDim2.new(0.395, 0,0.365, 0)
 MainFrame.BackgroundTransparency = 0.2
+MainFrame.Active = true
+MainFrame.Selectable = true
+MainFrame.Draggable = true
 AddUICorner(MainFrame)
 
 local UiStrokeForMain = Instance.new("UIStroke",MainFrame)
