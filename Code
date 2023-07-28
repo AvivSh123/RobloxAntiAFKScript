@@ -1,4 +1,4 @@
-llocal gameCore = game.CoreGui
+local gameCore = game.CoreGui
 
 local function AddUICorner(element)
 	local UiCorner = Instance.new("UICorner")
