@@ -168,15 +168,15 @@ SwitchMethod3.MouseButton1Click:Connect(function()
 	end
 end)
 
-function keyPressed(input)
-	if input.KeyCode == Enum.KeyCode.F then
+game:GetService("UserInputService").InputEnded:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.F and AntiAfkGui.Enabled == true then
 		AntiAfkGui.Enabled = false
 	else
-		AntiAfkGui.Enabled = true
+		if input.KeyCode == Enum.KeyCode.F then
+			AntiAfkGui.Enabled = true
+		end
 	end
-end
-
-game:GetService("UserInputService").InputBegan:Connect(keyPressed)
+end)
 
 while wait() do
 	if AutoMethood1 == true then
